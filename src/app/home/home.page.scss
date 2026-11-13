@@ -1,0 +1,69 @@
+
+.welcome {
+  margin: 20px 5px;
+}
+
+.welcome h1 {
+  color: #2457c5;
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.welcome p {
+  color: #777;
+}
+
+.counter {
+  background: #eaf1ff;
+  padding: 18px;
+  border-radius: 15px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.counter h2 {
+  color: #2457c5;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.counter p {
+  margin-bottom: 0;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-info h2 {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.task-info p {
+  color: #777;
+  white-space: normal;
+}
+
+.task-info small {
+  color: #2457c5;
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 65px;
+  color: gray;
+}

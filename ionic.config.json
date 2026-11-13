@@ -1,0 +1,7 @@
+{
+  "name": "MyTodoApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,51 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>MY DAILY TASKS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="welcome">
+    <h1>My To-Do List</h1>
+    <p>Organize your day. Get things done!</p>
+
+    <div class="counter">
+      <h2>{{ completedCount }} / {{ tasks.length }}</h2>
+      <p>Tasks Completed</p>
+    </div>
+  </div>
+
+  <ion-button expand="block" routerLink="/add-task">
+    + ADD NEW TASK
+  </ion-button>
+
+  <div *ngIf="tasks.length === 0" class="empty">
+    <h2>No tasks yet!</h2>
+    <p>Add your first task to get started.</p>
+  </div>
+
+  <ion-card *ngFor="let task of tasks">
+    <ion-card-content>
+      <div class="task-row">
+        <ion-checkbox
+          [checked]="task.completed"
+          (ionChange)="toggleTask(task.id)">
+        </ion-checkbox>
+
+        <ion-label class="task-info">
+          <h2 [class.done]="task.completed">{{ task.title }}</h2>
+          <p>{{ task.description }}</p>
+          <small>{{ task.completed ? 'Completed' : 'Pending' }}</small>
+        </ion-label>
+
+        <ion-button
+          color="danger"
+          fill="clear"
+          (click)="deleteTask(task.id)">
+          Delete
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
